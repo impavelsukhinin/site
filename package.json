@@ -1,0 +1,31 @@
+{
+  "name": "badjest",
+  "version": "1.0.0",
+  "description": "my website",
+  "main": "index.js",
+  "repository": "https://github.com/impavelsukhinin/site",
+  "author": "impavelsukhinin <p.sukhinin@rocketguys.com>",
+  "license": "MIT",
+  "scripts": {
+    "develop": "node index.js",
+    "restart": "forever restart badjest",
+    "pub": "NODE_ENV=production forever -a --uid 'badjest' start index.js",
+    "demon": "yarn && gulp public && yarn restart || yarn pub",
+    "stop_demon": "forever stop badjest"
+  },
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "forever": "^0.15.3",
+    "gulp": "^4.0.0",
+    "gulp-babel": "7",
+    "gulp-concat": "^2.6.1",
+    "gulp-csso": "^3.0.1",
+    "gulp-minify-ejs": "^1.0.3",
+    "gulp-rename": "^1.4.0",
+    "gulp-size": "^3.0.0",
+    "gulp-uglify": "^3.0.1"
+  }
+}

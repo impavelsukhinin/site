@@ -1,0 +1,14 @@
+node_modules/
+public/
+
+*.log
+*.sql
+*.sqlite
+
+.DS_Store
+ehthumbs.db
+Thumbs.db
+
+.idea/
+
+.vscode/

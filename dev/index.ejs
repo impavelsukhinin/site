@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html lang="ru" class="lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html lang="ru" class="lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html lang="ru" class="lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="ru">
+<head>
+	<title><%=title%></title>
+	<meta charset="utf-8" />
+	<meta name="yandex-verification" content="d03f327b7dbc1bec" />
+	<meta name='wmail-verification' content='2e19bca86ce2e48f9c762f982f93262e' />
+	<meta name="google-site-verification" content="94ai6246R4fSsWn0meqvV06Proju5XAPiXp0ZVk5Kys" />
+	<meta name="keywords" content="vds,linux,yandex direct,rest,html,css,xml,xhtml,javascript,wordpress,bitrix,nodejs,es6,java,adaptive layout,php,android,bootstrap,website,less,sass,angularjs,mongodb,mysql,jquery,grid,webpack,gulp,git,phpstorm,webstorm,laravel,react,redux">
+	<meta name="description" content="Создание веб-сайтов и приложений">
+	<meta name="author" content="Pavel Sukhinin">
+	<meta content="telephone=no" name="format-detection" />
+	<meta http-equiv="x-rim-auto-match" content="none">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width" />
+	<link rel="shortcut icon" type="image/png" href="favicon.ico"/>
+	<meta name="theme-color" content="#282923">
+</head>
+<body class="monokai">
+<input type="hidden" name="keywords" value="<%=keywords%>">
+<style>
+	.preload {
+		position: fixed;
+		left: 0;
+		top: 0;
+		display: flex;
+		width: 100%;
+		height: 100%;
+		z-index: 400;
+		background-color: #fff;
+		justify-content: center;
+		align-items: center;
+		font-size:20px;
+		-moz-transition: all 1s ease-in;
+		-o-transition: all 1s ease-in;
+		-webkit-transition: all 1s ease-in;
+		transition: all 1s ease-in;
+	}
+	.preload.disable {
+		opacity: 0;
+		visibility: hidden;
+	}
+</style>
+<div class="preload">
+	<img src="img/smile.png" alt="">
+</div>
+<div class="tagsWrapp">
+	<div class="tags">
+	</div>
+</div>
+	<div class="centerArea">
+		<div class="badjest">
+			<span class="ps">Pavel Sukhinin
+			</span> <span class="det">|</span> web developer</div>
+		<div class="contacts">
+			tel: <a href="tel:<%=phone%>"><img src="img/smiles/📱.png" alt="phone" title="phone"></a>
+
+			mail: <a target="_blank" href="mailto:<%=mail%>"><img src="img/smiles/📬.png" alt="mail" title="mail"></a>
+		</div>
+		<div id="vk"><a href="<%=vk%>" target="_blank"><img alt="my VK" src="img/VK.png" alt=""></a>
+			<a href="<%=fb%>" target="_blank"><img alt="my FB" src="img/fb.png" alt=""></a></div>
+		</div>
+<script>
+	function loadScript(src) {
+		return new Promise(function (resolve, reject) {
+			var s;
+			s = document.createElement('script');
+			s.src = src;
+			s.onload = resolve;
+			s.onerror = reject;
+			document.head.appendChild(s);
+		});
+	}
+	function loadCSS(hf) {
+		var ms = document.createElement("link");
+		ms.rel = "stylesheet";
+		ms.href = hf;
+		document.getElementsByTagName("body")[0].appendChild(ms);
+	}
+	<% if (isProd) { %>
+		loadCSS("css/styles.min.css");
+		loadScript('js/main.min.js');
+	<% } else { %> 
+		loadCSS("css/fonts.css");
+		loadCSS("css/main.css");
+		loadCSS("css/media.css");
+		loadScript('js/main.js');
+	<% } %>
+</script>
+</body>
+</html>

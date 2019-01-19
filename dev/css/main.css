@@ -1,0 +1,266 @@
+html, body {
+	font-size:100%;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	display: grid;
+	font-family: "Helvetica Neue", Helvetica,Arial, sans-serif;
+	line-height: 1.42;
+	-moz-transition: background-color 1s ease-in;
+	-o-transition: background-color 1s ease-in;
+	-webkit-transition: background-color 1s ease-in;
+	transition: background-color 1s ease-in;
+}
+
+.monokai .badjest {
+	color: white;
+}
+
+.monokai .contacts {
+	color: white;
+}
+
+body.monokai {
+	background-color: #282923;
+}
+
+.monokai .tags span {
+	-webkit-filter: grayscale(0%);
+	filter: grayscale(0%);
+}
+
+.simple .tags span {
+	color: grey !important;
+}
+
+.centerArea {
+	z-index: 30;
+	margin: auto;
+	text-align: center;
+}
+
+.badjest {
+	font-size: 3em;
+	color: black;
+	cursor: default;
+	font-family: "Muller";
+	-webkit-animation: fadein 4s;
+	-moz-animation: fadein 4s;
+	-ms-animation: fadein 4s;
+	-o-animation: fadein 4s;
+	animation: fadein 4s;
+
+}
+
+.badjest i {
+	font-style: normal;
+	color: white;
+	background: rgba(0,0,0,.8);
+}
+.badjest::selection {
+	color: white; 
+	background: #000; 
+}
+
+.badjest .det::selection {
+	color: white; 
+	background: #000; 
+}
+
+.badjest .det {
+	color: #ba4500;
+	animation: blink-caret 3s step-end infinite;
+}
+
+#number::selection {
+	color: white; 
+	background: #000; 
+}
+
+#mail::selection {
+	color: white; 
+	background: #000; 
+}
+
+#number {
+	line-height: 1;
+	font-size: 30px;
+	color: black;
+	cursor: default;
+	margin: 10px 0;
+	font-family: "Muller";
+	transition: all 0.5s linear;
+	-moz-transition: all 0.5s linear;
+	-o-transition: all 0.5s linear;
+	-webkit-transition: all 0.5s linear;
+}
+
+#mail {
+	line-height: 1;
+	font-size: 25px;
+	color: black;
+	cursor: default;
+	font-family: "Muller";
+	-moz-transition: all 0.5s linear;
+	-o-transition: all 0.5s linear;
+	-webkit-transition: all 0.5s linear;
+	transition: all 0.5s linear;
+}
+
+#vk {
+	position: absolute;
+	bottom: 5%;
+	left: 8%;
+}
+
+#vk img {
+	width: 30px;
+	height: 30px;
+}
+
+a {
+	color: #ba4500;
+}
+
+.tagsWrapp {
+	z-index: 1;
+	position: absolute;
+	width:100%;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.tags {
+	z-index: 1;
+	position: absolute;
+	width:150%;
+	left: -15px;
+	top: -10px;
+}
+
+.tags span {
+	opacity: 0;
+	color: gray;
+	font-size: 21px;
+	margin: 6px;
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+	-moz-transition: all 0.5s linear;
+	-o-transition: all 0.5s linear;
+	-webkit-transition: all 0.5s linear;
+	transition: all 0.5s linear;
+	display: inline-block;
+}
+
+.tags span.active {
+	opacity: .2;
+}
+
+.tags span.active.center {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+}
+
+.contacts {
+	margin: 10px 0;
+	font-size: 2em;
+	-webkit-animation: fadein 6s;
+	-moz-animation: fadein 6s;
+	-ms-animation: fadein 6s;
+	-o-animation: fadein 6s;
+	animation: fadein 6s;
+}
+
+.contacts a {
+	font-size: 50px;
+	text-decoration: none;
+}
+
+.contacts a:hover {
+	text-decoration: none;
+}
+
+button:active, button:focus {
+	outline: none;
+}
+
+*::-webkit-input-placeholder {
+	color: black;
+	opacity: 1;
+}
+*:-moz-placeholder {
+	color: black;
+	opacity: 1;
+}
+*::-moz-placeholder {
+	color: black;
+	opacity: 1;
+}
+*:-ms-input-placeholder {
+	color: black;
+	opacity: 1;
+}
+
+@keyframes fadein {
+	from { 
+		opacity: 0; 
+	}
+
+	to {
+		opacity: 1; 
+	}
+}
+
+@-moz-keyframes fadein {
+	from { 
+		opacity: 0; 
+	}
+	
+	to {
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes fadein {
+	from { 
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+@-ms-keyframes fadein {
+	from { 
+		opacity: 0;
+	}
+
+	to { 
+		opacity: 1;
+	}
+}
+
+@-o-keyframes fadein {
+	from { 
+		opacity: 0;
+	}
+
+	to { 
+		opacity: 1;
+	}
+}
+
+@keyframes blink-caret {
+	from, to { 
+		color: transparent;
+	}
+
+	50% { 
+		color: #ba4500; 
+	}
+}
