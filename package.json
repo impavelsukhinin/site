@@ -8,10 +8,10 @@
   "license": "MIT",
   "scripts": {
     "develop": "node index.js",
-    "restart": "forever restart badjest",
-    "pub": "NODE_ENV=production forever -a --uid 'badjest' start index.js",
-    "demon": "yarn && gulp public && yarn restart || yarn pub",
-    "stop_demon": "forever stop badjest"
+    "start_demon": "NODE_ENV=production forever -a --uid 'badjest' start index.js",
+    "restart_demon": "forever restart badjest",
+    "stop_demon": "forever stop badjest",
+    "pub": "yarn && gulp public && yarn restart_demon || yarn start_demon"
   },
   "dependencies": {
     "babel-core": "^6.26.3",
