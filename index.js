@@ -7,7 +7,7 @@ const PORT = 3000
 const folder = isProd ? './public' : './dev'
 
 app.set('view engine', 'ejs')
-app.set('views', path.join(__dirname, folder));
+app.set('views', path.join(__dirname, folder))
 app.use(express.static(folder))
 
 app.get('/', (req, res) => {
