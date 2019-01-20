@@ -16,7 +16,7 @@ app.get('/', (req, res) => {
 		keywords: `cocos creator,vds,linux,yandex direct,rest,html,css,xml,xhtml,javascript,
 				wordpress,bitrix,nodejs,es6,java,adaptive layout,php,android,bootstrap,website,
 				less,sass,angularjs,mongodb,mysql,jquery,grid,webpack,gulp,git,phpstorm,webstorm,
-				laravel,react,redux,🤓,😊,🤔,😎`,
+				laravel,react,redux,typescript,🤓,😊,🤔,😎`,
 		phone: '+7 (999) 476 51 61',
 		mail: 'impavelsukhinin@yandex.ru',
 		vk: 'https://vk.com/id175204143',
