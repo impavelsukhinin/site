@@ -152,6 +152,7 @@ a {
 	-webkit-transition: all 0.5s linear;
 	transition: all 0.5s linear;
 	display: inline-block;
+	user-select: none;
 }
 
 .tags span.active {
