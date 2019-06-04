@@ -4,26 +4,26 @@ const path = require('path')
 const isProd = process.env.NODE_ENV === 'production'
 const PORT = 3000
 
-const folder = isProd ? './public' : './dev'
+const folder = isProd ? './public' : './src'
 
 app.set('view engine', 'ejs')
 app.set('views', path.join(__dirname, folder))
 app.use(express.static(folder))
 
-app.get('/', (req, res) => {
+app.get('/', (_, res) => {
 	res.render('index', {
-		title: 'Pavel Sukhinin | Web developer',
-		keywords: `cocos creator,vds,linux,yandex direct,rest api,html,css,xml,javascript,
-				wordpress,bitrix,nodejs,es6,java,adaptive layout,php,android,bootstrap,website,
-				less,sass,angularjs,mongodb,mysql,jquery,grid,webpack,gulp,git,phpstorm,webstorm,
-				laravel,react,redux,typescript,🤓,😊,🤔,😎`,
-		phone: '+7 (999) 476 51 61',
-		mail: 'impavelsukhinin@yandex.ru',
-		vk: 'https://vk.com/id175204143',
+		title: `Pavel Sukhinin | Rocketbank's frontend developer`,
+		keywords: 'html5,pcss,js,nodejs,es6,less,sass,postcss,angularjs,mongodb,mysql,webpack,gulp,git,laravel,react,redux,typescript',
+		github: 'https://github.com/impavelsukhinin',
+		telegram: 'https://t.me/pavel_sukhinin',
 		fb: 'https://www.facebook.com/im.badjest',
+		job: {
+			name: 'Rocketbank',
+			site: 'https://rocketbank.ru',
+		},
 		isProd
 	})
 })
 
 app.listen(PORT)
-console.log(`Сервер запущен на ${PORT} порту в ${isProd ? 'production' : 'develop'} режиме`)
+console.log(`Server start on ${PORT} port in ${isProd ? 'production' : 'develop'} mode`)

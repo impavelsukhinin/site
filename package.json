@@ -7,25 +7,33 @@
   "author": "impavelsukhinin <p.sukhinin@rocketguys.com>",
   "license": "MIT",
   "scripts": {
-    "develop": "node index.js",
-    "start_demon": "NODE_ENV=production forever -a --uid 'badjest' start index.js",
-    "restart_demon": "forever restart badjest",
-    "stop_demon": "forever stop badjest",
-    "pub": "yarn && gulp public && yarn restart_demon || yarn start_demon"
+    "start": "NODE_ENV=development nodemon",
+    "serve": "yarn && gulp public && yarn pm2 start process.yml"
   },
   "dependencies": {
-    "babel-core": "^6.26.3",
-    "babel-preset-env": "^1.7.0",
     "ejs": "^2.6.1",
     "express": "^4.16.4",
-    "forever": "^0.15.3",
+    "pm2": "^3.5.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
     "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.1.0",
     "gulp-babel": "7",
     "gulp-concat": "^2.6.1",
     "gulp-csso": "^3.0.1",
     "gulp-minify-ejs": "^1.0.3",
     "gulp-rename": "^1.4.0",
     "gulp-size": "^3.0.0",
-    "gulp-uglify": "^3.0.1"
+    "gulp-uglify": "^3.0.1",
+    "nodemon": "^1.19.1"
+  },
+  "nodemonConfig": {
+    "watch": [
+      "./"
+    ],
+    "ext": "js",
+    "exec": "node ./index.js"
   }
 }

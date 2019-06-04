@@ -1,0 +1,131 @@
+@font-face {
+	font-family: "Muller";
+	src: url("Muller.otf");
+}
+
+html, body {
+	font-size: 100%;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	line-height: 1.42;
+	transition: background-color 1s ease-in;
+}
+
+:root {
+	--orange: #e26336;
+}
+
+::selection {
+	color: white; 
+	background: #000; 
+}
+
+a {
+	position: relative;
+	color: #000;
+	text-decoration: none;
+	transition: color 0.2s; 
+}
+
+a::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: -2px;
+	width: 100%;
+	height: 2px;
+	background-color: #000;
+	transition: transform 0.3s;
+}
+
+a:hover {
+	color: var(--orange);
+}
+
+a:hover::after {
+	transform: scale(0);
+}
+
+.badjest,
+.contacts {
+	font-family: "Muller", Helvetica;
+}
+
+.badjest {
+	font-size: 3em;
+	color: black;
+	z-index: 20;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.badjest .who {
+	font-size: 0.7em;
+}
+
+.tagsWrapp {
+	z-index: 1;
+	position: absolute;
+	width: 100%;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.tags {
+	z-index: 1;
+	position: absolute;
+	width:150%;
+	left: -15px;
+	top: -10px;
+}
+
+.tags span {
+	opacity: 0;
+	color: gray;
+	font-size: 21px;
+	margin: 6px;
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+	transition: all 0.5s linear;
+	display: inline-block;
+	user-select: none;
+}
+
+.tags span.active {
+	opacity: 0.15;
+}
+
+.tags span.active.center {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+}
+
+.contacts {
+	position: absolute;
+	z-index: 10;
+	font-size: 1.3em;
+	bottom: 30px;
+	left: 30px;
+}
+
+.contacts a + a {
+	margin-left: 10px;
+}
+
+@media only screen and (max-width : 445px) {
+	body, html {
+		font-size: 90%;
+	}
+}

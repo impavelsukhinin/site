@@ -5,9 +5,7 @@ const App = () => {
 		'#66D9EF',
 		'#A6E22E',
 		'#FD971F',
-		'#FFFFFF'
 	]
-	const preloader = document.querySelector('.preload')
 
 	const colorize = () => {
 		let time = 1
@@ -47,9 +45,7 @@ const App = () => {
 		colorize()
 	}
 
-
-	addClass('disable', preloader)
-	newState()
+	setTimeout(() => newState())
 
 	window.onresize = () => {
 		newState()
