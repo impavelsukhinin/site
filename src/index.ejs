@@ -5,7 +5,7 @@
 <!--[if gt IE 8]><!-->
 <html lang="ru">
 <head>
-	<title><%=title%></title>
+	<title>Pavel Sukhinin | Frontend developer</title>
 	<meta charset="utf-8" />
 	<meta name="yandex-verification" content="d03f327b7dbc1bec" />
 	<meta name='wmail-verification' content='2e19bca86ce2e48f9c762f982f93262e' />
@@ -18,15 +18,11 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width" />
 	<link rel="shortcut icon" type="image/png" href="favicon.ico"/>
-	<% if (isProd) { %>
-		<link rel="stylesheet" href="styles.min.css"/>
-	<% } else { %>
-		<link rel="stylesheet" href="main.css"/>
-	<% } %>
+	<link rel="stylesheet" href="main.css" inline/>
 	<meta name="theme-color" content="#282923">
 </head>
 <body>
-<input type="hidden" name="keywords" value="<%=keywords%>">
+<input type="hidden" name="keywords" value="html5,pcss,js,nodejs,es6,less,sass,postcss,angularjs,mongodb,mysql,webpack,gulp,git,laravel,react,redux,typescript">
 
 <div class="tagsWrapp">
 	<div class="tags"></div>
@@ -44,10 +40,6 @@
 	<a href="<%=fb%>" target="_blank" rel="noopener noreferrer">Facebook</a>
 </div>
 
-<% if (isProd) { %>
-	<script src="main.min.js"></script>
-<% } else { %> 
-	<script src="main.js"></script>
-<% } %>
+<script src="main.js" inline></script>
 </body>
 </html>

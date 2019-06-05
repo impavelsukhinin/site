@@ -3,18 +3,20 @@
 const gulp = require('gulp')
 const minifyCSS = require('gulp-csso')
 const concat = require('gulp-concat')
-const rename = require('gulp-rename')
 const uglify = require('gulp-uglify')
 const size = require('gulp-size')
 const babel = require('gulp-babel')
 const minifyEjs = require('gulp-minify-ejs')
 const autoprefixer = require('gulp-autoprefixer')
+const inlinesource = require('gulp-inline-source')
+const clean = require('gulp-clean')
 
 const BUILD_PATH = './public/'
 
 gulp.task('htmlMinify', () => 
-	gulp.src('./src/index.ejs')
+	gulp.src(`${BUILD_PATH}index.ejs`)
 		.pipe(minifyEjs())
+		.pipe(inlinesource())
 		.pipe(gulp.dest(BUILD_PATH))
 )
 
@@ -25,7 +27,6 @@ gulp.task('jsMinify', () => {
 		}))
 		.pipe(uglify())
 		.pipe(size())
-		.pipe(rename({suffix: '.min'}))
 		.pipe(gulp.dest(BUILD_PATH))
 })
 
@@ -33,23 +34,34 @@ gulp.task('cssProcess',
 	() =>
 		gulp.src('./src/main.css')
 		.pipe(autoprefixer())
-		.pipe(concat('styles.min.css'))
 		.pipe(minifyCSS())
+		.pipe(concat('main.css'))
 		.pipe(gulp.dest(BUILD_PATH, { overwrite: true }))
 )
 
 gulp.task('copyAssets',
 	() => 
 		gulp.src([
+			'./src/index.ejs',
 			'./src/favicon.ico',
 			'./src/Muller.otf',
 		])
 		.pipe(gulp.dest('./public/'))
 )
 
+gulp.task('deleteTrash', 
+	() => 
+		gulp.src([
+			`${BUILD_PATH}main.js`,
+			`${BUILD_PATH}main.css`,
+		], {read: false})
+		.pipe(clean())
+)
+
 gulp.task('public', gulp.series(
-	'htmlMinify',
 	'jsMinify',
 	'cssProcess',
 	'copyAssets',
+	'htmlMinify',
+	'deleteTrash',
 ))
