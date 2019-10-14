@@ -12,7 +12,7 @@ app.use(express.static(FOLDER))
 
 app.get('/', (_, res) => 
 	res.render('index', {
-		title: `Pavel Sukhinin | Frontend developer`,
+		title: 'Pavel Sukhinin | Frontend developer',
 		keywords: 'html5,pcss,js,nodejs,es6,less,sass,postcss,angularjs,mongodb,mysql,webpack,gulp,git,laravel,react,redux,typescript',
 		github: 'https://github.com/impavelsukhinin',
 		telegram: 'https://t.me/pavel_sukhinin',
