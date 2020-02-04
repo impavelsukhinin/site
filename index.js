@@ -18,8 +18,8 @@ app.get('/', (_, res) =>
 		telegram: 'https://t.me/pavel_sukhinin',
 		fb: 'https://www.facebook.com/im.badjest',
 		job: {
-			name: 'Rocketbank',
-			site: 'https://rocketbank.ru',
+			name: 'Revolut',
+			site: 'https://www.revolut.com/',
 		},
 	})
 )
