@@ -16,7 +16,7 @@ app.get('/', (_, res) =>
 		keywords: 'html5,pcss,js,nodejs,es6,less,sass,postcss,angularjs,mongodb,mysql,webpack,gulp,git,laravel,react,redux,typescript',
 		github: 'https://github.com/impavelsukhinin',
 		telegram: 'https://t.me/pavel_sukhinin',
-		fb: 'https://www.facebook.com/im.badjest',
+		linkedin: 'https://www.linkedin.com/in/pavel-sukhinin/',
 		job: {
 			name: 'Revolut',
 			site: 'https://www.revolut.com/',
