@@ -1,5 +1,3 @@
-'use strict'
-
 const gulp = require('gulp')
 const minifyCSS = require('gulp-csso')
 const concat = require('gulp-concat')
@@ -20,15 +18,15 @@ gulp.task('htmlMinify', () =>
 		.pipe(gulp.dest(BUILD_PATH))
 )
 
-gulp.task('jsMinify', () => {
-	return gulp.src('./src/main.js')
+gulp.task('jsMinify', () => 
+	gulp.src('./src/main.js')
 		.pipe(babel({
-			presets: ['env']
+			presets: ['@babel/env']
 		}))
 		.pipe(uglify())
 		.pipe(size())
 		.pipe(gulp.dest(BUILD_PATH))
-})
+)
 
 gulp.task('cssProcess',
 	() =>
