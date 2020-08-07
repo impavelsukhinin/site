@@ -1,28 +1,39 @@
 const express = require('express')
 const app = express()
 const path = require('path')
-const isProd = process.env.NODE_ENV === 'production'
+const IS_PROD = process.env.NODE_ENV === 'production'
 
 const PORT = 3000
-const FOLDER = isProd ? './public' : './src'
+const ROOT_FOLDER = IS_PROD ? './public' : './src'
 
 app.set('view engine', 'ejs')
-app.set('views', path.join(__dirname, FOLDER))
-app.use(express.static(FOLDER))
+app.set('views', path.join(__dirname, ROOT_FOLDER))
+app.use(express.static(ROOT_FOLDER))
 
 app.get('/', (_, res) => 
 	res.render('index', {
 		title: 'Pavel Sukhinin | Frontend developer',
 		keywords: 'html5,pcss,js,nodejs,es6,less,sass,postcss,angularjs,mongodb,mysql,webpack,gulp,git,laravel,react,redux,typescript',
-		github: 'https://github.com/impavelsukhinin',
-		telegram: 'https://t.me/pavel_sukhinin',
-		linkedin: 'https://www.linkedin.com/in/pavel-sukhinin/',
+		contacts: [
+			{
+				name: 'Github',
+				link: 'https://github.com/impavelsukhinin',
+			},
+			{
+				name: 'Telegram',
+				link: 'https://t.me/pavel_sukhinin',
+			},
+			{
+				name: 'LinkedIn',
+				link: 'https://www.linkedin.com/in/pavel-sukhinin/',
+			},
+		],
 		job: {
 			name: 'Revolut',
-			site: 'https://www.revolut.com/',
+			link: 'https://www.revolut.com/',
 		},
 	})
 )
 
 app.listen(PORT)
-console.log(`Server start on ${PORT} port in ${isProd ? 'production' : 'develop'} mode`)
+console.log(`The server started on ${PORT} port in ${process.env.NODE_ENV} mode`)

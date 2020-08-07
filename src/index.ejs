@@ -30,13 +30,13 @@
 <div class="badjest">
 	Pavel Sukhinin
 	<div class="who">
-		frontend developer at&nbsp;<a href="<%=job.site%>" target="_blank"><%=job.name%></a>
+		frontend developer at&nbsp;<a href="<%=job.link%>" target="_blank"><%=job.name%></a>
 	</div>
 </div>
 <div class="contacts">
-	<a href="<%=github%>" target="_blank" rel="noopener noreferrer">Github</a>
-	<a href="<%=telegram%>" target="_blank" rel="noopener noreferrer">Telegram</a>
-	<a href="<%=linkedin%>" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+	<%contacts.forEach(function(contact) {%>
+		<a href="<%=contact.link%>" target="_blank" rel="noopener noreferrer"><%=contact.name%></a>
+	<%})%>
 </div>
 
 <script src="main.js" inline></script>
