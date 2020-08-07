@@ -13,7 +13,7 @@ html, body {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: "Helvetica Neue", Helvetica, Arial, Times, system-ui;
 	line-height: 1.42;
 	transition: background-color 1s ease-in;
 }
@@ -55,7 +55,7 @@ a:hover::after {
 
 .badjest,
 .contacts {
-	font-family: "Muller", Helvetica;
+	font-family: "Muller", Helvetica, Arial, Times, system-ui;
 }
 
 .badjest {
