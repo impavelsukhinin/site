@@ -36,4 +36,4 @@ app.get('/', (_, res) =>
 )
 
 app.listen(PORT)
-console.log(`The server started on ${PORT} port in ${process.env.NODE_ENV} mode`)
+console.log(`The server started on http://localhost:${PORT} in ${process.env.NODE_ENV} mode`)
