@@ -3,7 +3,7 @@ import { createGlobalStyle } from 'styled-components'
 export const GlobalStyle = createGlobalStyle`
   @font-face {
     font-family: 'Muller';
-    src: url('/src/assets/Muller.otf');
+    src: url('/Muller.otf');
   }
 
   ::selection {

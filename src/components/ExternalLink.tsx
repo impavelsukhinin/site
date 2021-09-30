@@ -22,7 +22,7 @@ const Link = styled.a`
     color: #e26336;
   }
 
-  a:hover::after {
+  &:hover::after {
     transform: scale(0);
   }
 
