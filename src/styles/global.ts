@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
 
-export const GlobalStyle = createGlobalStyle`
+const GlobalStyleBase = createGlobalStyle`
   @font-face {
     font-family: 'Muller';
     src: url('/Muller.otf');
@@ -35,3 +35,8 @@ export const GlobalStyle = createGlobalStyle`
     }
   }
 `
+
+/**
+  @see https://github.com/styled-components/styled-components/issues/3738
+*/
+export const GlobalStyle = GlobalStyleBase as any

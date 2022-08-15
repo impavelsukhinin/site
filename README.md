@@ -1,5 +1,11 @@
-# site
+# [pasha.work](https://pasha.work/)
+
+😲<br/>
+👕<br/>
+👖<br/>
 
 ```bash
-docker-compose up --build -d
+yarn dev 
+yarn build
+yarn preview
 ```
