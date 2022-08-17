@@ -1,4 +1,4 @@
-import React, { FC, AnchorHTMLAttributes } from 'react'
+import { FC, AnchorHTMLAttributes } from 'react'
 import styled from 'styled-components'
 
 const Link = styled.a`

@@ -1,12 +1,12 @@
-import React, { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import styled, { keyframes } from 'styled-components'
 
-import { TAGS } from '../constants'
+import { TAGS, ZINDEX } from '../constants'
 
 const monokaiColors = ['#F92672', '#66D9EF', '#A6E22E', '#FD971F']
 
 const Wrapper = styled.div`
-  z-index: 1;
+  z-index: ${ZINDEX.tags};
   position: absolute;
   width: 100%;
   left: 0;
@@ -17,7 +17,6 @@ const Wrapper = styled.div`
 `
 
 const InnerBlock = styled.div`
-  z-index: 1;
   position: absolute;
   width: 150%;
   left: -15px;
@@ -91,16 +90,16 @@ export const Tags = () => {
   }
 
   useEffect(() => {
-    const listener = () => {
+    const handleTagsGenerate = () => {
       if (!generating.current) {
         generateTags()
       }
     }
 
     generateTags()
-    window.addEventListener('resize', listener)
+    window.addEventListener('resize', handleTagsGenerate)
 
-    return () => window.removeEventListener('resize', listener)
+    return () => window.removeEventListener('resize', handleTagsGenerate)
   }, [])
 
   return (

@@ -14,7 +14,7 @@ const GlobalStyleBase = createGlobalStyle`
   html,
   body,
   #root {
-    font-size: 100%;
+    font-size: 16px;
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -25,13 +25,12 @@ const GlobalStyleBase = createGlobalStyle`
     box-sizing: border-box;
     font-family: 'Helvetica Neue', Helvetica, Arial, Times, system-ui;
     line-height: 1.42;
-    transition: background-color 1s ease-in;
   }
 
   @media only screen and (max-width: 445px) {
     body,
     html {
-      font-size: 90%;
+      font-size: 14px;
     }
   }
 `

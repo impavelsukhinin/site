@@ -1,20 +1,18 @@
-import React from 'react'
-
 import { ExternalLink, Tags } from './components'
 import { CONTACT_LINKS, INFO } from './constants'
-import { GlobalStyle, Contacts, About, Who } from './styles'
+import { GlobalStyle, Contacts, About, Who, Location } from './styles'
 
 export const App = () => (
   <>
     <GlobalStyle />
-    <Tags />
 
     <About>
       {INFO.who}
       <Who>
         {INFO.position} at&nbsp;
-        <ExternalLink href={INFO.where.href}>{INFO.where.title}</ExternalLink>
+        <ExternalLink href={INFO.job.href}>{INFO.job.title}</ExternalLink>
       </Who>
+      <Location>📍&nbsp;{INFO.location}</Location>
     </About>
     <Contacts>
       {CONTACT_LINKS.map(({ title, href }) => (
@@ -23,5 +21,7 @@ export const App = () => (
         </ExternalLink>
       ))}
     </Contacts>
+
+    <Tags />
   </>
 )

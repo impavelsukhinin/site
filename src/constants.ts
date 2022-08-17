@@ -1,7 +1,6 @@
 export const TAGS = [
   'html5',
   'pcss',
-  'js',
   'nodejs',
   'es6',
   'less',
@@ -16,11 +15,15 @@ export const TAGS = [
   'laravel',
   'react',
   'redux',
+  'javascript',
   'typescript',
+  'styled components',
+  'vite',
   'postgres',
   'python',
   'fastapi',
   'pydantic',
+  'e2e',
 ]
 
 export const CONTACT_LINKS = [
@@ -37,8 +40,14 @@ export const CONTACT_LINKS = [
 export const INFO = {
   who: 'Pavel Sukhinin',
   position: 'software engineer',
-  where: {
+  job: {
     title: 'Revolut',
     href: 'https://www.revolut.com/',
-  }
+  },
+  location: 'Moscow',
+}
+
+export const ZINDEX = {
+  tags: 1,
+  info: 2,
 }
