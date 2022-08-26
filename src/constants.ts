@@ -12,12 +12,12 @@ export const TAGS = [
   'webpack',
   'gulp',
   'git',
-  'laravel',
   'react',
   'redux',
   'javascript',
   'typescript',
   'styled components',
+  'next.js',
   'vite',
   'postgres',
   'python',
@@ -44,7 +44,7 @@ export const INFO = {
     title: 'Revolut',
     href: 'https://www.revolut.com/',
   },
-  location: 'Moscow',
+  location: 'Dubai | UAE',
 }
 
 export const ZINDEX = {
