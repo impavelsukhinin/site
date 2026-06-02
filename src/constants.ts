@@ -44,7 +44,7 @@ export const INFO = {
     title: 'Revolut',
     href: 'https://www.revolut.com/',
   },
-  location: 'Dubai | UAE',
+  location: 'Madrid | Spain',
 }
 
 export const ZINDEX = {
