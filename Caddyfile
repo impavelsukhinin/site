@@ -1,4 +1,0 @@
-pasha.work {
-  encode zstd gzip
-  reverse_proxy site:80
-}

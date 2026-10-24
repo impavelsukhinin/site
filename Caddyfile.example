@@ -1,0 +1,5 @@
+# Copy this file to Caddyfile and replace example.com with your domain.
+example.com {
+  encode zstd gzip
+  reverse_proxy site:80
+}
