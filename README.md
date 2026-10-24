@@ -5,7 +5,9 @@
 👖<br/>
 
 ```bash
-yarn dev 
+nvm install && nvm use
+yarn install
+yarn start
 yarn build
 yarn preview
 ```
